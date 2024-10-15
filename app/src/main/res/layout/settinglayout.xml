@@ -4,11 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-<<<<<<< HEAD
-    android:padding="@dimen/_10sdp"
-=======
     android:padding="@dimen/_15sdp"
->>>>>>> origin/master
     android:background="@drawable/button_sqaure_bg">
 
     <ImageView
@@ -16,10 +12,7 @@
         android:layout_height="@dimen/_22sdp"
         android:id="@+id/setting_rv_imageview"
         android:src="@drawable/login_logo"
-<<<<<<< HEAD
         android:layout_margin="@dimen/_5sdp"
-=======
->>>>>>> origin/master
         app:tint="@color/white" />
 
     <TextView

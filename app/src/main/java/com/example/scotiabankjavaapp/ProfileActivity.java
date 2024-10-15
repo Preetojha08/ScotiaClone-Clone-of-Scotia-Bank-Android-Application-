@@ -26,9 +26,6 @@ public class ProfileActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_profile);
 
-        listViewAcc = (ListView) findViewById(R.id.accountlistview);
-        listViewApp = (ListView) findViewById(R.id.applistview);
-
         arracc = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,accInfoItems);
         listViewAcc.setAdapter(arracc);
 
