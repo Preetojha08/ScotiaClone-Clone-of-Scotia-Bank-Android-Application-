@@ -27,13 +27,13 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
+
         setContentView(R.layout.activity_home);
 
         viewPager2 = findViewById(R.id.viewpager_test);
         // Data for cards
-        String[] cardNames = {"Debit Card 1", "Debit Card 2", "Debit Card 3"};
-        String[] balances = {"$1000.00", "$1500.00", "$2000.00"};
+        String[] cardNames = {"Debit Card", "Credit Card", "Forex Card"};
+        String[] balances = {"$10,000.00", "$1500.78", "$5000.00"};
 
         // Create and set the adapter for ViewPager2
         ViewPagerAdapter adapter = new ViewPagerAdapter(cardNames, balances);
