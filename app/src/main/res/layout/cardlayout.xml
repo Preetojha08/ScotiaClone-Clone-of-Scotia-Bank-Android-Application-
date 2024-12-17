@@ -24,7 +24,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_165sdp"
+            android:layout_height="@dimen/_170sdp"
             android:background="@drawable/gradient_bg"
             android:orientation="vertical"
             application:ignore="ExtraText">
@@ -52,7 +52,7 @@
                 android:id="@+id/cardTitle"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:fontFamily="@font/scotia_regular"
+                android:fontFamily="@font/scotia_bold"
                 android:textColor="@color/white"/>
 
             <TextView
@@ -83,13 +83,13 @@
                 android:textStyle="bold"
                 android:layout_marginHorizontal="@dimen/_16sdp"
                 android:layout_below="@id/accountbalance"
-                android:fontFamily="@font/scotia_regular"
+                android:fontFamily="@font/scotia_bold"
                 android:textColor="@color/white"/>
 
             <ImageView
-                android:layout_width="@dimen/_52sdp"
-                android:layout_height="@dimen/_52sdp"
-                android:src="@drawable/card_chip"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/new_chip"
                 android:layout_marginHorizontal="@dimen/_20sdp"
                 android:layout_centerVertical="true"
                 android:layout_alignParentRight="true"/>
