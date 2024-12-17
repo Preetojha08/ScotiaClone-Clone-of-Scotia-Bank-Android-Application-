@@ -54,14 +54,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewAdapter.viewHolder holder, int position) {
+
         holder.tv.setText(text.get(position));
 
         if (layout_number == 0) {
             holder.imgview.setImageResource(Images.get(position));
         }
-
-
-        holder.imgview.setImageResource(Images.get(position));
 
     }
 

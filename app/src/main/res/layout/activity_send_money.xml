@@ -24,11 +24,22 @@
             android:backgroundTint="@color/white"
             android:background="@drawable/button_sqaure_bg">
 
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Interact E Transfere "
+                android:textColor="@color/red"
+                android:textSize="@dimen/_16sdp"
+                android:fontFamily="@font/scotia_bold"/>
+
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="From"
                 android:textColor="@color/red"
+                android:layout_marginTop="@dimen/_12sdp"
                 android:textSize="@dimen/_13sdp"
                 android:fontFamily="@font/scotia_bold"/>
 
@@ -39,7 +50,7 @@
                 android:layout_marginTop="@dimen/_5sdp"
                 android:hint="Sender Account Info"
                 app:hintAnimationEnabled="true"
-                app:helperText="Select the account you want to send money from."
+                app:errorContentDescription="Select the account you want to send money from."
                 app:helperTextEnabled="true"
                 app:helperTextTextColor="@color/red"
                 app:boxStrokeErrorColor="@color/red"
@@ -71,7 +82,7 @@
                 android:layout_marginTop="@dimen/_5sdp"
                 android:hint="Receiver Account Info"
                 app:hintAnimationEnabled="true"
-                app:helperText="Select the Receiver account you want to send money."
+                app:errorContentDescription="Select the Receiver account you want to send money."
                 app:helperTextEnabled="true"
                 app:helperTextTextColor="@color/red"
                 app:boxStrokeErrorColor="@color/red"
@@ -94,7 +105,7 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:hint="Enter the Amount"
                 app:hintAnimationEnabled="true"
-                app:helperText="Amount must be greater than ZERO"
+                app:errorContentDescription="Amount must be greater than ZERO"
                 app:helperTextEnabled="true"
                 app:helperTextTextColor="@color/red"
                 app:boxStrokeErrorColor="@color/red"
@@ -117,7 +128,7 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:hint="Add any Message you want"
                 app:hintAnimationEnabled="true"
-                app:helperText="Select the Account You want to Send Money From"
+                app:errorContentDescription="Select the Account You want to Send Money From"
                 app:helperTextEnabled="true"
                 app:helperTextTextColor="@color/red"
                 app:boxStrokeErrorColor="@color/red"
@@ -134,6 +145,17 @@
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send Money"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/button_sqaure_bg"
+            android:backgroundTint="@color/red"/>
 
     </LinearLayout>
 

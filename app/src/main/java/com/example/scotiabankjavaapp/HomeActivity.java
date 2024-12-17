@@ -14,13 +14,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.viewpager2.widget.ViewPager2;
 
 public class HomeActivity extends AppCompatActivity {
 
-    ImageView logoutBtn,profileBtn;
+    ImageView logoutBtn,profileBtn,seacrchBtn;
     boolean logoutFlag = true;
     Handler handler = new Handler();
-
+    ViewPager2 viewPager2;
     LinearLayout move_money_ll;
 
     @Override
@@ -29,13 +30,27 @@ public class HomeActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_home);
 
+        viewPager2 = findViewById(R.id.viewpager_test);
+        // Data for cards
+        String[] cardNames = {"Debit Card 1", "Debit Card 2", "Debit Card 3"};
+        String[] balances = {"$1000.00", "$1500.00", "$2000.00"};
+
+        // Create and set the adapter for ViewPager2
+        ViewPagerAdapter adapter = new ViewPagerAdapter(cardNames, balances);
+        viewPager2.setAdapter(adapter);
+
+
+
+        seacrchBtn = (ImageView) findViewById(R.id.search_img_btn);
+
+
         move_money_ll=(LinearLayout) findViewById(R.id.home_move_money_layout);
 
         move_money_ll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(HomeActivity.this,SendMoneyActivity.class));
+                startActivity(new Intent(HomeActivity.this,MoveMoneyActivity.class));
             }
         });
 
