@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Interact E-Transfer"
+            android:text="Manage E-Transfer"
             android:paddingVertical="@dimen/_10sdp"
             android:textColor="@color/red"
             android:textSize="@dimen/_13sdp"

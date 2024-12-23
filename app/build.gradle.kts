@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -32,6 +33,15 @@ android {
 }
 
 dependencies {
+
+    // Import the Firebase BoM
+    implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation("com.google.firebase:firebase-analytics:22.1.2")
+    implementation ("com.google.firebase:firebase-database:20.5.1")
+    implementation ("com.google.firebase:firebase-auth:22.1.0") // Optional if authentication is needed
+    implementation ("com.intuit.sdp:sdp-android:1.1.1")
+    implementation ("com.intuit.sdp:sdp-android:1.1.1")
 
     implementation(libs.appcompat)
     implementation(libs.material)

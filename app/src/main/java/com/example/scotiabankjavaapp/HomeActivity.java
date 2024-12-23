@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -16,6 +17,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
+import java.util.Calendar;
+
 public class HomeActivity extends AppCompatActivity {
 
     ImageView logoutBtn,profileBtn,seacrchBtn;
@@ -23,6 +26,10 @@ public class HomeActivity extends AppCompatActivity {
     Handler handler = new Handler();
     ViewPager2 viewPager2;
     LinearLayout move_money_ll;
+
+    TextView homeGreeting_tv;
+    Calendar calendar;
+    String greeting;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +46,26 @@ public class HomeActivity extends AppCompatActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(cardNames, balances);
         viewPager2.setAdapter(adapter);
 
+        User user = new User();
+        homeGreeting_tv = (TextView) findViewById(R.id.home_greeting_textview);
+        // to Get current hour with help of Calendar Class
+        calendar = Calendar.getInstance();
+        int hour = calendar.get(Calendar.HOUR_OF_DAY);
+        String sirname = user.getFirstName() + " " + user.getLastName();
+
+        // Determine the greeting message
+        if (hour >= 5 && hour < 12) {
+            greeting = "Good Morning, "+sirname;
+        } else if (hour >= 12 && hour < 17) {
+            greeting = "Good Afternoon, "+sirname;
+        } else if (hour >= 17 && hour < 21) {
+            greeting = "Good Evening, "+sirname;
+        } else {
+            greeting = "Welcome, Sir!";
+        }
+
+
+        homeGreeting_tv.setText(greeting);
 
 
         seacrchBtn = (ImageView) findViewById(R.id.search_img_btn);

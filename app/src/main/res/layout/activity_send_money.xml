@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".SendMoneyActivity">
 
@@ -20,9 +19,7 @@
             android:layout_height="wrap_content"
             android:paddingVertical="@dimen/_10sdp"
             android:paddingHorizontal="@dimen/_5sdp"
-            android:orientation="vertical"
-            android:backgroundTint="@color/white"
-            android:background="@drawable/button_sqaure_bg">
+            android:orientation="vertical">
 
 
             <TextView
@@ -136,7 +133,7 @@
                 app:hintTextColor="@color/red">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/sendmoney_edittext_amount"
+                    android:id="@+id/sendmoney_edittext_msg"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"

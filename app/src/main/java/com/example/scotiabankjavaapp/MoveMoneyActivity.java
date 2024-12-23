@@ -28,7 +28,6 @@ public class MoveMoneyActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_move_money);
 
         recyclerView_interact = (RecyclerView) findViewById(R.id.move_money_interact_rv);

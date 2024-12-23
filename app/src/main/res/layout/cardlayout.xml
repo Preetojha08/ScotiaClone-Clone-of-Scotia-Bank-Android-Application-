@@ -32,8 +32,9 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/card_bg"
-                android:alpha="0.7"
+                android:src="@drawable/dotted_world_bg"
+                android:alpha="0.5"
+                android:padding="@dimen/_8sdp"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"
                 app:tint="@color/white"/>
@@ -41,7 +42,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Debit Card"
+                android:text="Card Name"
                 android:textSize="@dimen/_12sdp"
                 android:textStyle="bold"
                 android:shadowColor="@color/black"
@@ -88,12 +89,23 @@
 
             <ImageView
                 android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:src="@drawable/new_chip"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_centerVertical="true"
+                android:alpha="0.3"
+                android:layout_alignParentRight="true"
+                app:tint="@color/black" />
+
+            <ImageView
+                android:layout_width="@dimen/_40sdp"
                 android:layout_height="@dimen/_40sdp"
                 android:src="@drawable/new_chip"
                 android:layout_marginHorizontal="@dimen/_20sdp"
                 android:layout_centerVertical="true"
+                android:paddingBottom="@dimen/_2sdp"
                 android:layout_alignParentRight="true"/>
-
 
         </RelativeLayout>
 
