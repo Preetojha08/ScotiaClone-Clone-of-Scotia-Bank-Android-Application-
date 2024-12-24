@@ -1,6 +1,7 @@
 package com.example.scotiabankjavaapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,6 +18,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     AppCompatButton btn;
@@ -27,6 +30,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+        String logincheck = sharedPreferences.getString("Userlogin", "");
+
+        if (logincheck.equalsIgnoreCase("true")) {
+            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+            startActivity(intent);
+            finish();
+        }
 
         // Initialize views
         log_username_edt = findViewById(R.id.login_edittext_username);
@@ -73,37 +85,24 @@ public class MainActivity extends AppCompatActivity {
                                 ", Date of Birth: " + user.getDob() +
                                 ", Gender: " + user.getGender());
 
-                        // Show the user details in a Toast
-                        String userInfo = "Username: " + user.getUsername() + "\n" +
-                                "First Name: " + user.getFirstName() + "\n" +
-                                "Last Name: " + user.getLastName() + "\n" +
-                                "Email: " + user.getEmail() + "\n" +
-                                "Date of Birth: " + user.getDob() + "\n" +
-                                "Gender: " + user.getGender();
+                        // Create arrays for card details
+                        ArrayList<String> cardNames = new ArrayList<>();
+                        ArrayList<String> balances = new ArrayList<>();
 
-                        // Add card details to the user information
-                        StringBuilder cardInfo = new StringBuilder("\nCard Details:\n");
                         if (user.getCards() != null) {
                             for (String cardKey : user.getCards().keySet()) {
-                                Card card = user.getCards().get(cardKey); // Get card details
-                                cardInfo.append("Card Name: ").append(card.getCardName()).append("\n")
-                                        .append("Balance: ").append(card.getBalance()).append("\n\n");
+                                Card card = user.getCards().get(cardKey);
+                                cardNames.add(card.getCardName());
+                                balances.add(String.valueOf(card.getBalance())); // Convert balance to string
                             }
                         }
 
-                        // Display both user and card details in Toast
-                        Toast.makeText(MainActivity.this, userInfo + cardInfo.toString(), Toast.LENGTH_LONG).show();
-                        // Display user and card details in Toast
-                        Toast.makeText(MainActivity.this,cardInfo.toString(), Toast.LENGTH_LONG).show();
-
-
-                        // Show success message
-                        Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-
-                        // Pass user data (including cards) to the next activity
+                        // Pass user and card details to the next activity
                         Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                        intent.putExtra("user", user); // Pass the User object (which includes card details)
-                        intent.putExtra("cards", user.getCards()); // Pass the Cards object (Map of cards)
+                        intent.putExtra("user", user); // Pass the User object
+                        intent.putExtra("cardNames", cardNames); // Pass card names
+                        intent.putExtra("balances", balances); // Pass card balances
+                        Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                         startActivity(intent);
                         finish();
                         break;

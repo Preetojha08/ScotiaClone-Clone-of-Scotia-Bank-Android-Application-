@@ -43,7 +43,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Preet Ojha"
                     android:id="@+id/profile_display_username"
                     android:textSize="@dimen/_18sdp"
                     android:textStyle="bold"
@@ -53,7 +52,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="developer.preetojha08@gmaiil.com"
+                    android:id="@+id/profile_display_email"
                     android:textSize="@dimen/_10sdp"
                     android:textStyle="bold"
                     android:layout_marginTop="@dimen/_2sdp"

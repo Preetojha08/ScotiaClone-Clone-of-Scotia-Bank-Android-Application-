@@ -3,7 +3,9 @@ package com.example.scotiabankjavaapp;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
+import android.content.SharedPreferences;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -11,6 +13,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,21 +40,26 @@ public class ProfileActivity extends AppCompatActivity {
     RecyclerView recyclerView_appInfo;
     RecyclerView recylerView_accInfo;
 
+    TextView pro_username_tv,pro_email_tv;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_profile);
 
-//        arracc = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,accInfoItems);
-//        listViewAcc.setAdapter(arracc);
-//
-//        arrapp.add("Application Theme");
-//        arrapp.add("Application Language");
-//        arrapp.add("Manage Widgets");
-//
-//        arrapp = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,appInfoItems);
-//        listViewApp.setAdapter(arrapp);
+        pro_email_tv = (TextView)findViewById(R.id.profile_display_email);
+        pro_username_tv = (TextView) findViewById(R.id.profile_display_username);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+
+        String firstName = sharedPreferences.getString("firstName", "Default First Name");
+        String lastName = sharedPreferences.getString("lastName", "Default Last Name");
+        String email = sharedPreferences.getString("email", "Default Email");
+
+        String fullname = firstName+" "+lastName;
+        pro_username_tv.setText(fullname);
+        pro_email_tv.setText(email);
 
         recylerView_accInfo=(RecyclerView)findViewById(R.id.accountrecyclerview);
         recyclerView_appInfo=(RecyclerView)findViewById(R.id.apprecyclerview);

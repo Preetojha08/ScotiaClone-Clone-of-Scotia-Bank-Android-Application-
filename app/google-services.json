@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "583071434979",
+    "project_id": "bank-app-2k24",
+    "storage_bucket": "bank-app-2k24.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583071434979:android:5ab650c7ef9743d8305dd6",
+        "android_client_info": {
+          "package_name": "com.example.scotiabankjavaapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8LT6SAyZbxi9GBrlxUlyKO2I4YPv1aQ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

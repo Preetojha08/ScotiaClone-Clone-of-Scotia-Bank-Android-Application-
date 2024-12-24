@@ -8,12 +8,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+
 public class ViewPagerAdapter extends RecyclerView.Adapter<ViewPagerAdapter.Pager2ViewHolder> {
 
-    private String[] cardNames;
-    private String[] balances;
+    private ArrayList<String> cardNames;
+    private ArrayList<String> balances;
 
-    public ViewPagerAdapter(String[] cardNames, String[] balances) {
+    public ViewPagerAdapter(ArrayList<String> cardNames, ArrayList<String> balances) {
         this.cardNames = cardNames;
         this.balances = balances;
     }
@@ -27,13 +29,13 @@ public class ViewPagerAdapter extends RecyclerView.Adapter<ViewPagerAdapter.Page
 
     @Override
     public void onBindViewHolder(@NonNull ViewPagerAdapter.Pager2ViewHolder holder, int position) {
-        holder.cardName.setText(cardNames[position]);
-        holder.balance.setText(balances[position]);
+        holder.cardName.setText(cardNames.get(position));
+        holder.balance.setText(balances.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return cardNames.length;
+        return cardNames.size();
     }
 
     public class Pager2ViewHolder extends RecyclerView.ViewHolder {
