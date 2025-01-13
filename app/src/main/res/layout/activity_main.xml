@@ -90,6 +90,7 @@
                     android:id="@+id/login_edittext_username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="rahulojha02"
                     android:drawableLeft="@drawable/login_username"
                     android:drawablePadding="@dimen/_5sdp"
                     android:textSize="@dimen/_12sdp" />
@@ -112,6 +113,7 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/login_pass"
                     android:drawablePadding="@dimen/_5sdp"
+                    android:text="a"
                     android:inputType="textWebPassword"
                     android:textSize="@dimen/_12sdp" />
             </com.google.android.material.textfield.TextInputLayout>

@@ -18,6 +18,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Manage E-Transfer"
+            android:visibility="invisible"
+            android:textColor="@color/red"
+            android:fontFamily="@font/scotia_bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Manage E-Transfer"
             android:paddingVertical="@dimen/_10sdp"
             android:textColor="@color/red"
             android:textSize="@dimen/_13sdp"

@@ -26,8 +26,8 @@
                 android:textColor="@color/red"
                 android:layout_marginTop="@dimen/_15sdp"
                 android:textSize="@dimen/_15sdp"
-                android:textStyle="bold"
                 android:visibility="invisible"
+                android:textStyle="bold"
                 android:layout_alignParentTop="true"
                 android:id="@+id/profileHeading"
                 android:fontFamily="@font/scotia_bold"/>
@@ -46,7 +46,20 @@
                     android:id="@+id/profile_display_username"
                     android:textSize="@dimen/_18sdp"
                     android:textStyle="bold"
+                    android:text="kuchbhi"
                     android:fontFamily="@font/scotia_bold"
+                    android:textColor="@color/red"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profile_display_type"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold"
+                    android:text="Premium Account"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_below="@id/profile_display_username"
+                    android:fontFamily="@font/scotia_regular"
                     android:textColor="@color/red"/>
 
                 <TextView
@@ -55,8 +68,9 @@
                     android:id="@+id/profile_display_email"
                     android:textSize="@dimen/_10sdp"
                     android:textStyle="bold"
+                    android:text="kuch hi"
                     android:layout_marginTop="@dimen/_2sdp"
-                    android:layout_below="@id/profile_display_username"
+                    android:layout_below="@id/profile_display_type"
                     android:fontFamily="@font/scotia_regular"
                     android:textColor="@color/red"/>
 

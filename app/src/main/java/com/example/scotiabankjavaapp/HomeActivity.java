@@ -39,8 +39,8 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        //        -----------------
-        // Retrieve the passed User object, card names, and balances from the intent
+        EdgeToEdge.enable(this);
+
         User user = (User) getIntent().getSerializableExtra("user");
         ArrayList<String> cardNames = (ArrayList<String>) getIntent().getSerializableExtra("cardNames");
         ArrayList<String> balances = (ArrayList<String>) getIntent().getSerializableExtra("balances");
@@ -106,6 +106,8 @@ public class HomeActivity extends AppCompatActivity {
         int hour = calendar.get(Calendar.HOUR_OF_DAY);
         String sirname = user.getFirstName() + " " + user.getLastName();
 
+        Toast.makeText(this, "d: "+hour, Toast.LENGTH_SHORT).show();
+
         // Determine the greeting message
         if (hour >= 5 && hour < 12) {
             greeting = "Good Morning, "+sirname;
@@ -114,7 +116,7 @@ public class HomeActivity extends AppCompatActivity {
         } else if (hour >= 17 && hour < 21) {
             greeting = "Good Evening, "+sirname;
         } else {
-            greeting = "Welcome, Sir!";
+            greeting = "Welcome, "+sirname;
         }
 
 

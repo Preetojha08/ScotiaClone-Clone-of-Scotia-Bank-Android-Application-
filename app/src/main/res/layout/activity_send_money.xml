@@ -21,6 +21,13 @@
             android:paddingHorizontal="@dimen/_5sdp"
             android:orientation="vertical">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Interact E Transfere "
+                android:textColor="@color/red"
+                android:visibility="invisible"
+                android:fontFamily="@font/scotia_bold"/>
 
             <TextView
                 android:layout_width="match_parent"
