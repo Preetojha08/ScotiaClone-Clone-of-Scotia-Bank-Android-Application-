@@ -1,4 +1,4 @@
-![Login_Dark](https://github.com/user-attachments/assets/01d9d023-a7a1-415c-a5d6-29f0b7cb2332)# Bank Android Application
+# Bank Android Application
 
 ## Overview
 
@@ -58,15 +58,21 @@ git clone <repository-url>
 ### Run the Project:
 1. Click **Run** or use the shortcut `Shift + F10`.
 
-### Screenshots
+### Application Screenshots
 
 Login Screen | Home Screen | Profile Screen | Move Money Screen | Interact Screen 
 ------------ | ------------- | ------------- | ------------- | ------------- 
-![0](https://github.com/Preetojha08/COVID-19-Testing-App/assets/47290783/528922bf-dd34-4b14-80bf-0420c4a81910) | ![1](https://github.com/Preetojha08/COVID-19-Testing-App/assets/47290783/709c1b96-cc1f-4dd1-a8c4-371cfe7aa015) | ![2](https://github.com/Preetojha08/COVID-19-Testing-App/assets/47290783/598136b0-6578-483f-b14d-9d3b52bd21b6) | ![3](https://github.com/Preetojha08/COVID-19-Testing-App/assets/47290783/41df1c84-c619-44cf-ab9f-08d212977153) | ![4](https://github.com/Preetojha08/COVID-19-Testing-App/assets/47290783/c14355fc-47f9-4301-9597-2b68770ebc40) 
+![0](https://github.com/user-attachments/assets/01d9d023-a7a1-415c-a5d6-29f0b7cb2332) | ![1](https://github.com/user-attachments/assets/ccf1ff3f-8318-455d-adaa-3ed2438c3c56) | ![2](https://github.com/user-attachments/assets/d707c18b-2444-4c75-a797-d4b142545279) | ![3](https://github.com/user-attachments/assets/7dffaeff-780c-4542-b491-4192e3f9d468) | ![4](https://github.com/user-attachments/assets/451176ac-03f9-4618-af4e-40cce60c20a4) 
+
+### Firebase Database Structure
+
+| Database Structure | 
+| ------------------ |
+| ![0](https://github.com/user-attachments/assets/c6402524-0873-4f5d-ac90-4fe99727fcf9) 
 
 ## Project Structure
 
-- **LoginActivity.java** - Handles user authentication.
+- **LoginActivity.java** - Handles user authentication.https://github.com/user-attachments/assets/7dffaeff-780c-4542-b491-4192e3f9d468
 - **HomeActivity.java** - Displays user information post-login.
 - **SessionManager.java** - Manages Shared Preferences for session persistence.
 - **themes.xml** - Manages Light and Dark theme styles.
@@ -86,6 +92,5 @@ Developed by Preet Ojha
 
 For any queries, contact:  
 📧 [developer.preetojha08@gmail.com](mailto:developer.preetojha08@gmail.com)  
-📞 437-808-2062  
 🔗 [LinkedIn](https://www.linkedin.com/in/developer-preet-ojha/)
 
